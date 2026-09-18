@@ -1,6 +1,3 @@
-/* ANTE Jewellery - Modern Luxury Design */
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -70,8 +67,10 @@ nav a {
     color: #333333;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 13px;
-    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
@@ -104,19 +103,32 @@ main {
     animation: fadeUp 0.8s ease;
 }
 
-/* HEADINGS */
+/*HEADINGS */
+
 h1,
 h2,
 h3 {
     font-family: Georgia, "Times New Roman", serif;
     font-weight: normal;
+    color: #292929;
+}
+
+h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.4rem;
 }
 
 h2 {
+    font-size: 2.2rem;
+    letter-spacing: 0.15rem;
     text-align: center;
-    font-size: 36px;
     margin-bottom: 35px;
-    color: #292929;
+}
+
+h3 {
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 12px;
 }
 
 h2::after {
@@ -128,15 +140,15 @@ h2::after {
     margin: 12px auto;
 }
 
-h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
 /* PARAGRAPHS */
 p {
-    font-size: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
     color: #555555;
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
+    margin-bottom: 15px;
 }
 
 /* SECTIONS */
@@ -251,8 +263,10 @@ form {
 }
 
 label {
-    font-weight: bold;
-    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
     color: #333333;
 }
 
@@ -391,5 +405,102 @@ footer p {
     article img {
         width: 240px;
         height: 240px;
+    }
+}
+
+/* DESKTOP GRID LAYOUT */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* TABLET RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    main {
+        width: 92%;
+    }
+}
+
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 12px 0;
+    }
+
+    main {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+    }
+
+    button,
+    input[type="submit"] {
+        width: 100%;
     }
 }
