@@ -218,7 +218,7 @@ Part 2 focused on improving the visual appearance and responsiveness of the ANTE
 
 ### CSS Styling
 
-The website was styled using an external `style.css` file. The styling includes:
+The website was styled using an external style.css file. The styling includes:
 
 - Consistent colours and fonts
 - Typography and spacing
@@ -269,3 +269,9 @@ Testing included:
 - Added relative CSS units such as percentages and rem.
 - Added responsive image attributes using srcset and sizes.
 - Tested the website using browser developer tools.
+
+### Part 2 References
+
+- W3Schools. CSS Tutorial.
+- MDN Web Docs. CSS Reference.
+- MDN Web Docs. Responsive Design.
