@@ -212,3 +212,60 @@ Any issues found during development were corrected before continuing with the pr
 
 - ANTE Jewellery Instagram page: @ante.jewellers
 
+## Part 2 - CSS Styling and Responsive Design
+
+Part 2 focused on improving the visual appearance and responsiveness of the ANTE Jewellery website. An external CSS stylesheet was created and linked to all website pages.
+
+### CSS Styling
+
+The website was styled using an external `style.css` file. The styling includes:
+
+- Consistent colours and fonts
+- Typography and spacing
+- Navigation styling
+- Product cards
+- Buttons and forms
+- Borders and shadows
+- Hover effects
+- Image effects
+- Responsive layouts
+
+### Responsive Design
+
+The website was designed to work on desktop, tablet and mobile screen sizes.
+
+Desktop uses a three-column layout for products and gallery items. Tablet uses a two-column layout, while mobile uses a single-column layout.
+
+Media queries were used to adjust the layout, navigation, font sizes and images for different screen sizes.
+
+### Testing
+
+The website was tested using Google Chrome Developer Tools at different screen sizes.
+
+Testing included:
+
+- Desktop view
+- Tablet view
+- Mobile view
+- Navigation
+- Product layout
+- Gallery layout
+- Forms
+- Images
+- Responsive behaviour
+
+### Part 2 Changelog
+
+**Version 2.0**
+
+- Reviewed the Part 1 website before starting Part 2.
+- No specific lecturer feedback was provided for Part 1.
+- Created and linked an external CSS stylesheet.
+- Added consistent base styling across all website pages.
+- Improved typography using different font sizes, weights, spacing and line height.
+- Added CSS Grid and Flexbox layouts.
+- Added hover effects and visual styling.
+- Added responsive breakpoints for desktop, tablet and mobile devices.
+- Added relative CSS units such as percentages and rem.
+- Added responsive image attributes using srcset and sizes.
+- Tested the website using browser developer tools.

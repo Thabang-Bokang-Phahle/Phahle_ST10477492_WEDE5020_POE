@@ -1,0 +1,395 @@
+/* ANTE Jewellery - Modern Luxury Design */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f3f0eb;
+    color: #292929;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #f7f4ef, #e9e3db);
+    text-align: center;
+    padding: 55px 20px 35px;
+    border-bottom: 1px solid #d8d2ca;
+    animation: fadeIn 1s ease;
+}
+
+header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+    font-weight: normal;
+    letter-spacing: 9px;
+    color: #292929;
+}
+
+header h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #9b7653;
+    margin: 15px auto;
+}
+
+header p {
+    color: #777777;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #dedad4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    position: relative;
+    color: #333333;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #9b7653;
+    left: 50%;
+    bottom: -7px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #9b7653;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* MAIN */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 55px auto;
+    animation: fadeUp 0.8s ease;
+}
+
+/* HEADINGS */
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 35px;
+    color: #292929;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 2px;
+    background-color: #9b7653;
+    margin: 12px auto;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* PARAGRAPHS */
+p {
+    font-size: 15px;
+    color: #555555;
+}
+
+/* SECTIONS */
+section {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #e1ddd7;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.4s ease;
+}
+
+section:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
+}
+
+/* ARTICLES / PRODUCT CARDS */
+article {
+    background: linear-gradient(145deg, #ffffff, #f8f6f3);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e3dfd8;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: #9b7653;
+    transition: 0.4s ease;
+}
+
+article:hover::before {
+    left: 0;
+}
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.5s ease;
+}
+
+/* PRODUCT IMAGES */
+article img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+article:hover img {
+    transform: scale(1.04);
+}
+
+/* IMAGE HOVER EFFECT */
+img:hover {
+    transform: scale(1.02);
+}
+
+/* LINKS */
+a {
+    color: #8b6748;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #b28a64;
+}
+
+/* BUTTONS */
+button,
+input[type="submit"] {
+    background-color: #292929;
+    color: #ffffff;
+    border: 1px solid #292929;
+    padding: 14px 30px;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #9b7653;
+    border-color: #9b7653;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* FORMS */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0 20px;
+    border: 1px solid #d5d0c8;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #9b7653;
+    box-shadow: 0 0 0 2px rgba(155, 118, 83, 0.1);
+}
+
+/* FOOTER */
+footer {
+    background-color: #292929;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 70px;
+}
+
+footer p {
+    color: #dddddd;
+    font-size: 13px;
+}
+
+/* SPECIAL LUXURY TEXT */
+.luxury-text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    color: #292929;
+    letter-spacing: 2px;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* SLIDE UP ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 40px 15px 30px;
+    }
+
+    header h1 {
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+
+    nav {
+        position: static;
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 14px 0;
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    main {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    section {
+        padding: 22px;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    article {
+        padding: 20px;
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+    }
+
+    button,
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    main {
+        width: 92%;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    article img {
+        width: 240px;
+        height: 240px;
+    }
+}
