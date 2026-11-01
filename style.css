@@ -507,3 +507,127 @@ footer p {
         width: 100%;
     }
 }
+
+/* Accessible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #9b7653;
+    outline-offset: 3px;
+}
+
+/* Mobile menu */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        margin: 0 auto 12px;
+        width: auto;
+    }
+
+    nav a {
+        display: block;
+        margin: 0;
+        padding: 12px;
+    }
+
+    nav:not(.menu-open) a {
+        display: none;
+    }
+
+    nav.menu-open a {
+        display: block;
+    }
+
+    header h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        letter-spacing: 0.15rem;
+    }
+
+    main {
+        width: min(94%, 1200px);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Gallery lightbox */
+.gallery-image {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.gallery-image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#lightbox {
+    width: min(90%, 900px);
+    max-width: 900px;
+    max-height: 90vh;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #d8d2ca;
+    background: #ffffff;
+}
+
+#lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#lightbox img {
+    display: block;
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+#lightbox button {
+    display: block;
+    margin: 0 0 15px auto;
+}
+
+/* Frequently asked questions */
+details {
+    border-bottom: 1px solid #e1ddd7;
+    padding: 16px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #292929;
+}
+
+summary:hover {
+    color: #9b7653;
+}
+
+summary:focus-visible {
+    outline: 2px solid #9b7653;
+    outline-offset: 4px;
+}

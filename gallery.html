@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANTE Jewellery - Gallery</title>
+    <title>Jewellery Gallery | ANTE Jewellery</title>
+    <meta name="description" content="View the ANTE Jewellery gallery and explore our collection of elegant rings, necklaces, bracelets and earrings.">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,15 +15,22 @@
         <h1>ANTE Jewellery</h1>
 
         <!-- Navigation -->
-        <nav>
+        <button class="menu-toggle" type="button"
+            aria-expanded="false" aria-controls="main-nav">
+            Menu
+        </button>
+
+        <nav id="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="custom.html">Custom Jewellery</a>
             <a href="gallery.html">Gallery</a>
             <a href="cart.html">Shopping Cart</a>
+            <a href="enquiry.html">Enquiries</a>
             <a href="contact.html">Contact Us</a>
         </nav>
+
     </header>
 
     <!-- Main content -->
@@ -42,49 +50,78 @@
             <h2>Jewellery Collection</h2>
 
             <div>
-                <img src="images/Products/classic-gold-ring.jpg"
-                     alt="Classic Gold Ring"
-                     width="250">
+                <button type="button" class="gallery-image"
+                        data-full="images/Products/classic-gold-ring.jpg"
+                        aria-label="View Classic Gold Ring larger">
+                    <img src="images/Products/classic-gold-ring.jpg"
+                         alt="Classic Gold Ring"
+                         loading="lazy">
+                </button>
                 <h3>Classic Gold Ring</h3>
                 <p>R899</p>
             </div>
 
             <div>
-                <img src="images/Products/elegance-pendant.jpg"
-                     alt="Elegance Pendant"
-                     width="250">
+                <button type="button"
+                        class="gallery-image"
+                        data-full="images/Products/elegance-pendant.jpg"
+                        aria-label="View Elegance Pendant larger">
+                    <img src="images/Products/elegance-pendant.jpg"
+                         alt="Elegance Pendant"
+                         loading="lazy">
+                </button>
                 <h3>Elegance Pendant</h3>
                 <p>R1,299</p>
             </div>
 
             <div>
-                <img src="images/Products/signature-bracelet.jpg"
-                     alt="Signature Bracelet"
-                     width="250">
+                <button type="button"
+                        class="gallery-image"
+                        data-full="images/Products/signature-bracelet.jpg"
+                        aria-label="View Signature Bracelet larger">
+                    <img src="images/Products/signature-bracelet.jpg"
+                         alt="Signature Bracelet"
+                         loading="lazy">
+                </button>
                 <h3>Signature Bracelet</h3>
                 <p>R1,099</p>
             </div>
 
             <div>
-                <img src="images/Products/pearl-drop-earrings.jpg"
-                     alt="Pearl Drop Earrings"
-                     width="250">
+                <button type="button"
+                        class="gallery-image"
+                        data-full="images/Products/pearl-drop-earrings.jpg"
+                        aria-label="View Pearl Drop Earrings larger">
+                    <img src="images/Products/pearl-drop-earrings.jpg"
+                         alt="Pearl Drop Earrings"
+                         loading="lazy">
+                </button>
                 <h3>Pearl Drop Earrings</h3>
                 <p>R749</p>
             </div>
 
             <div>
-                <img src="images/Products/classic-hoop-earrings.jpg"
-                     alt="Classic Hoop Earrings"
-                     width="250">
+                <button type="button"
+                        class="gallery-image"
+                        data-full="images/Products/classic-hoop-earrings.jpg"
+                        aria-label="View Classic Hoop Earrings larger">
+                    <img src="images/Products/classic-hoop-earrings.jpg"
+                         alt="Classic Hoop Earrings"
+                         loading="lazy">
+                </button>
                 <h3>Classic Hoop Earrings</h3>
                 <p>R599</p>
             </div>
 
             <div>
-                <img src="images/Products/ante-statement-ring.jpg"
-                     alt="ANTE Statement Ring"
-                     width="250">
+                <button type="button"
+                        class="gallery-image"
+                        data-full="images/Products/ante-statement-ring.jpg"
+                        aria-label="View ANTE Statement Ring larger">
+                    <img src="images/Products/ante-statement-ring.jpg"
+                         alt="ANTE Statement Ring"
+                         loading="lazy">
+                </button>
                 <h3>ANTE Statement Ring</h3>
                 <p>R1,199</p>
             </div>
@@ -112,6 +149,14 @@
         <p>&copy; 2026 ANTE Jewellery</p>
         <p>Instagram: @ante.jewellers</p>
     </footer>
+
+    <script src="js/script.js" defer></script>
+
+    <!-- Gallery lightbox -->
+    <dialog id="lightbox" aria-label="Enlarged gallery image">
+        <button type="button" id="close-lightbox">Close</button>
+        <img id="lightbox-image" src="" alt="">
+    </dialog>
 
 </body>
 </html>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANTE Jewellery - Products</title>
+    <title>Shop Jewellery | ANTE Jewellery</title>
+    <meta name="description" content="Explore the ANTE Jewellery collection of elegant rings, necklaces, bracelets and earrings. Find jewellery to suit your personal style.">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,15 +15,22 @@
         <h1>ANTE Jewellery</h1>
 
         <!-- Navigation -->
-        <nav>
+        <button class="menu-toggle" type="button"
+            aria-expanded="false" aria-controls="main-nav">
+            Menu
+        </button>
+
+        <nav id="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="custom.html">Custom Jewellery</a>
             <a href="gallery.html">Gallery</a>
             <a href="cart.html">Shopping Cart</a>
+            <a href="enquiry.html">Enquiries</a>
             <a href="contact.html">Contact Us</a>
         </nav>
+
     </header>
 
     <!-- Main content -->
@@ -38,92 +46,117 @@
             </p>
         </section>
 
-        <!-- Rings -->
-        <section>
-            <h2>Rings</h2>
+        <section class="product-controls">
+         <h2>Find Your Jewellery</h2>
 
-            <div class="product-grid">
+         <label for="product-search">Search products</label>
+         <input
+             type="search"
+             id="product-search"
+             placeholder="Search rings, earrings, bracelets..."
+         >
 
-            <article>
-                <img src="images/Products/classic-gold-ring.jpg"
-                     alt="Classic Gold Ring"
-                     width="250">
+         <label for="product-sort">Sort products</label>
+         <select id="product-sort">
+             <option value="default">Featured products</option>
+             <option value="price-low">Price: Low to High</option>
+             <option value="price-high">Price: High to Low</option>
+             <option value="name">Name: A to Z</option>
+         </select>
 
-                <h3>Classic Gold Ring</h3>
-                <p>A simple gold ring that can be worn every day.</p>
-                <p>Price: R899</p>
-                <button type="button">Add to Cart</button>
-            </article>
+         <p id="product-count" aria-live="polite"></p>
 
-            <article>
-                <img src="images/Products/ante-statement-ring.jpg"
-                     alt="ANTE Statement Ring"
-                     width="250">
-
-                <h3>ANTE Statement Ring</h3>
-                <p>A bold ring designed to stand out.</p>
-                <p>Price: R1,199</p>
-                <button type="button">Add to Cart</button>
-            </article>
         </section>
 
-        <!-- Necklaces -->
+        <!-- Product collection -->
         <section>
-            <h2>Necklaces</h2>
+            <h2>All Jewellery</h2>
 
-            <article>
-                <img src="images/Products/elegance-pendant.jpg"
-                     alt="Elegance Pendant"
-                     width="250">
+            <div class="product-grid" id="product-list">
 
-                <h3>Elegance Pendant</h3>
-                <p>A stylish pendant for everyday wear or special occasions.</p>
-                <p>Price: R1,299</p>
-                <button type="button">Add to Cart</button>
-            </article>
-        </section>
+                <article class="product-card"
+                         data-name="Classic Gold Ring"
+                         data-price="899">
+                    <img src="images/Products/classic-gold-ring.jpg"
+                         alt="Classic gold ring"
+                         loading="lazy">
+                    <h3>Classic Gold Ring</h3>
+                    <p>A simple gold ring that can be worn every day.</p>
+                    <p>Price: R899</p>
+                    <button type="button" class="add-to-cart"
+                            data-name="Classic Gold Ring"
+                            data-price="899">Add to Cart</button>
+                </article>
 
-        <!-- Bracelets -->
-        <section>
-            <h2>Bracelets</h2>
+                <article class="product-card"
+                         data-name="ANTE Statement Ring"
+                         data-price="1199">
+                    <img src="images/Products/ante-statement-ring.jpg"
+                         alt="ANTE statement ring"
+                         loading="lazy">
+                    <h3>ANTE Statement Ring</h3>
+                    <p>A bold ring designed to stand out.</p>
+                    <p>Price: R1,199</p>
+                    <button type="button" class="add-to-cart"
+                            data-name="ANTE Statement Ring"
+                            data-price="1199">Add to Cart</button>
+                </article>
 
-            <article>
-                <img src="images/Products/signature-bracelet.jpg"
-                     alt="Signature Bracelet"
-                     width="250">
+                <article class="product-card"
+                         data-name="Elegance Pendant"
+                         data-price="1299">
+                    <img src="images/Products/elegance-pendant.jpg"
+                         alt="Elegance pendant necklace"
+                         loading="lazy">
+                    <h3>Elegance Pendant</h3>
+                    <p>A stylish pendant for everyday wear or special occasions.</p>
+                    <p>Price: R1,299</p>
+                    <button type="button" class="add-to-cart"
+                            data-name="Elegance Pendant"
+                            data-price="1299">Add to Cart</button>
+                </article>
 
-                <h3>Signature Bracelet</h3>
-                <p>A modern bracelet with a simple chain design.</p>
-                <p>Price: R1,099</p>
-                <button type="button">Add to Cart</button>
-            </article>
-        </section>
+                <article class="product-card"
+                         data-name="Signature Bracelet"
+                         data-price="1099">
+                    <img src="images/Products/signature-bracelet.jpg"
+                         alt="Signature bracelet"
+                         loading="lazy">
+                    <h3>Signature Bracelet</h3>
+                    <p>A modern bracelet with a simple chain design.</p>
+                    <p>Price: R1,099</p>
+                    <button type="button" class="add-to-cart"
+                            data-name="Signature Bracelet"
+                            data-price="1099">Add to Cart</button>
+                </article>
 
-        <!-- Earrings -->
-        <section>
-            <h2>Earrings</h2>
+                <article class="product-card"
+                         data-name="Pearl Drop Earrings"
+                         data-price="749">
+                    <img src="images/Products/pearl-drop-earrings.jpg"
+                         alt="Pearl drop earrings"
+                        loading="lazy">
+                    <h3>Pearl Drop Earrings</h3>
+                    <p>Elegant earrings suitable for casual and formal occasions.</p>
+                    <p>Price: R749</p>
+                    <button type="button" class="add-to-cart"
+                            data-name="Pearl Drop Earrings"
+                            data-price="749">Add to Cart</button>
+                </article>
 
-            <article>
-                <img src="images/Products/pearl-drop-earrings.jpg"
-                     alt="Pearl Drop Earrings"
-                     width="250">
-
-                <h3>Pearl Drop Earrings</h3>
-                <p>Elegant earrings suitable for casual and formal occasions.</p>
-                <p>Price: R749</p>
-                <button type="button">Add to Cart</button>
-            </article>
-
-            <article>
-                <img src="images/Products/classic-hoop-earrings.jpg"
-                     alt="Classic Hoop Earrings"
-                     width="250">
-
-                <h3>Classic Hoop Earrings</h3>
-                <p>Simple hoop earrings that can be worn every day.</p>
-                <p>Price: R599</p>
-                <button type="button">Add to Cart</button>
-            </article>
+                <article class="product-card"
+                         data-name="Classic Hoop Earrings"
+                         data-price="599">
+                    <img src="images/Products/classic-hoop-earrings.jpg"
+                         alt="Classic hoop earrings"
+                         loading="lazy">
+                    <h3>Classic Hoop Earrings</h3>
+                    <p>Simple hoop earrings that can be worn every day.</p>
+                    <p>Price: R599</p>
+                    <button type="button" class="add-to-cart"
+                            data-name="Classic Hoop Earrings"
+                            data-price="599">Add to Cart</button>
+                </article>
 
             </div>
         </section>
@@ -135,6 +168,8 @@
         <p>&copy; 2026 ANTE Jewellery</p>
         <p>Instagram: @ante.jewellers</p>
     </footer>
+
+    <script src="js/script.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/index.html</loc>
+    </url>
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/about.html</loc>
+    </url>
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/products.html</loc>
+    </url>
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/custom.html</loc>
+    </url>
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/enquiry.html</loc>
+    </url>
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/gallery.html</loc>
+    </url>
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/cart.html</loc>
+    </url>
+    <url>
+        <loc>https://YOUR-PUBLISHED-DOMAIN/contact.html</loc>
+    </url>
+</urlset>

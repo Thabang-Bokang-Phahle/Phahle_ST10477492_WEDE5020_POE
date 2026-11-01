@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Enquiries | ANTE Jewellery</title>
+    <meta name="description" content="Enquire about ANTE Jewellery products, custom designs, prices and availability.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>ANTE Jewellery</h1>
+
+        <button class="menu-toggle" type="button"
+                aria-expanded="false" aria-controls="main-nav">
+            Menu
+        </button>
+
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="custom.html">Custom Jewellery</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="cart.html">Shopping Cart</a>
+            <a href="enquiry.html">Enquiries</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Jewellery Enquiry</h2>
+
+            <p>
+                Complete the form below to enquire about a product,
+                its availability, pricing or a custom jewellery design.
+            </p>
+
+            <form id="enquiry-form"
+                  action="https://formsubmit.co/phahlethabang@gmail.com"
+                  method="POST">
+
+                <label for="enquiry-name">Full name</label>
+                <input type="text" id="enquiry-name" name="name"
+                       minlength="2" maxlength="80" required>
+
+                <label for="enquiry-email">Email address</label>
+                <input type="email" id="enquiry-email" name="email"
+                       maxlength="120" required>
+
+                <label for="enquiry-phone">Phone number</label>
+                <input type="tel" id="enquiry-phone" name="phone"
+                       pattern="[0-9+() -]{7,20}"
+                       title="Enter a phone number using 7 to 20 digits or phone symbols."
+                       required>
+
+                <label for="enquiry-type">Enquiry type</label>
+                <select id="enquiry-type" name="enquiry_type" required>
+                    <option value="">Select an option</option>
+                    <option value="product">Existing product</option>
+                    <option value="custom">Custom jewellery</option>
+                    <option value="availability">Product availability</option>
+                </select>
+
+                <label for="enquiry-product">Product or design</label>
+                <input type="text" id="enquiry-product" name="product"
+                       maxlength="100" required>
+
+                <label for="enquiry-budget">Budget in Rand</label>
+                <input type="number" id="enquiry-budget" name="budget"
+                       min="0" max="1000000" step="1" required>
+
+                <label for="enquiry-date">Preferred date, if applicable</label>
+                <input type="date" id="enquiry-date" name="preferred_date">
+
+                <label for="enquiry-message">Enquiry details</label>
+                <textarea id="enquiry-message" name="message"
+                          minlength="10" maxlength="1000"
+                          rows="5" required></textarea>
+
+                <button type="submit">Send Enquiry</button>
+
+                <p id="enquiry-feedback"
+                   role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ANTE Jewellery</p>
+        <p>Instagram: @ante.jewellers</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANTE Jewellery - About Us</title>
+    <title>About ANTE Jewellery | Our Story and Vision</title>
+    <meta name="description" content="Learn about ANTE Jewellery, our passion for elegant jewellery, our vision and our commitment to timeless style and quality.">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,15 +15,22 @@
         <h1>ANTE Jewellery</h1>
 
         <!-- Navigation -->
-        <nav>
+        <button class="menu-toggle" type="button"
+            aria-expanded="false" aria-controls="main-nav">
+            Menu
+        </button>
+
+        <nav id="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="custom.html">Custom Jewellery</a>
             <a href="gallery.html">Gallery</a>
             <a href="cart.html">Shopping Cart</a>
+            <a href="enquiry.html">Enquiries</a>
             <a href="contact.html">Contact Us</a>
         </nav>
+
     </header>
 
     <!-- Main content -->
@@ -84,6 +92,33 @@
             </p>
         </section>
 
+        <!-- Frequently asked questions -->
+    <section>
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+            <summary>What jewellery does ANTE offer?</summary>
+            <p>
+                ANTE Jewellery offers rings, pendants, bracelets and earrings.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can I enquire about custom jewellery?</summary>
+            <p>
+                Yes. Use the custom jewellery page to describe the design
+                you are interested in.
+            </p>
+        </details>
+
+        <details>
+            <summary>How can I contact ANTE Jewellery?</summary>
+            <p>
+                Use the contact page to send a general message.
+            </p>
+        </details>
+    </section>
+
     </main>
 
     <!-- Footer -->
@@ -91,6 +126,8 @@
         <p>&copy; 2026 ANTE Jewellery</p>
         <p>Instagram: @ante.jewellers</p>
     </footer>
+
+    <script src="js/script.js" defer></script>
 
 </body>
 </html>
