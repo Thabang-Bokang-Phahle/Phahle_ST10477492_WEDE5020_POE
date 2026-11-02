@@ -1,4 +1,4 @@
  User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-PUBLISHED-DOMAIN/sitemap.xml
+Sitemap: https://thabang-bokang-phahle.github.io/Phahle_ST10477492_WEDE5020_POE/contact.html 
